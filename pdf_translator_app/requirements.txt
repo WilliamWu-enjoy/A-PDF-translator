@@ -1,6 +1,9 @@
-PyQt6>=6.5.0
 pdf2zh>=1.7.0
 PyMuPDF>=1.23.0
 deep-translator>=1.11.0
 requests>=2.31.0
 tqdm>=4.66.0
+doclayout-yolo>=0.0.4
+torch
+opencv-python-headless
+numpy<2.0.0
