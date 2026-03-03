@@ -7,3 +7,6 @@ doclayout-yolo>=0.0.4
 torch
 opencv-python-headless
 numpy<2.0.0
+ml-dtypes>=0.4.0
+onnx>=1.14.0
+onnxruntime>=1.15.0
