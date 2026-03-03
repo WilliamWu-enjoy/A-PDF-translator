@@ -1,14 +1,22 @@
+# Critical: Install numpy first to prevent build isolation issues
+numpy==1.26.4
+# Pin ml-dtypes to a known stable version compatible with numpy<2.0
+ml-dtypes==0.2.0
+
+# Core dependencies
 pdf2zh>=1.7.0
 PyMuPDF>=1.23.0
 deep-translator>=1.11.0
 requests>=2.31.0
 tqdm>=4.66.0
 doclayout-yolo>=0.0.4
-# Force CPU torch first
---find-links https://download.pytorch.org/whl/torch_stable.html
+
+# PyTorch (CPU only via extra-index-url in Streamlit)
 torch>=2.0.0
+
+# System dependencies
 opencv-python-headless
-numpy<2.0.0
-ml-dtypes>=0.4.0
-onnx>=1.16.0
-onnxruntime>=1.15.0
+
+# ONNX stack - pinned to known working combinations
+onnx==1.15.0
+onnxruntime==1.16.3
