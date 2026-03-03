@@ -4,11 +4,11 @@ deep-translator>=1.11.0
 requests>=2.31.0
 tqdm>=4.66.0
 doclayout-yolo>=0.0.4
-torch
+# Use CPU-only version of torch to reduce size and avoid compatibility issues on Streamlit Cloud
+torch --index-url https://download.pytorch.org/whl/cpu
 opencv-python-headless
-# numpy<2.0.0 is critical for compatibility with older onnx/ml-dtypes
 numpy<2.0.0
-# Specific version pinning to resolve conflict
 ml-dtypes>=0.4.0
-onnx==1.16.0
+# Use a pre-built wheel for ONNX to avoid compilation errors
+onnx>=1.16.0
 onnxruntime>=1.15.0
